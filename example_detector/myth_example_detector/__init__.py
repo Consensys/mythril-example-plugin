@@ -1,0 +1,1 @@
+from myth_example_detector.detector import OwnershipDetector
