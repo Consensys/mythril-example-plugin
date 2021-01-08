@@ -1,4 +1,5 @@
 from mythril.analysis import solver
+from mythril.plugin.interface import MythrilPlugin
 from mythril.analysis.report import Issue
 from mythril.analysis.swc_data import UNPROTECTED_SELFDESTRUCT
 from mythril.exceptions import UnsatError
@@ -29,7 +30,7 @@ class OwnershipDetector(DetectionModule, MythrilPlugin):
     plugin_description = \
         "This is an example detection module plugin which finds ownership takeover vulnerabilities.\n" \
         "This is largely copy of the reachable exceptions module already present in Mythril."
-    default_enabled = True
+    plugin_default_enabled = True
 
     # Detection Module Meta
     name = "Detects ownership takeover vulnerabilities"
