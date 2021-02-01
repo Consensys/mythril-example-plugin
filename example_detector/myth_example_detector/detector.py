@@ -74,6 +74,7 @@ class OwnershipDetector(DetectionModule, MythrilPlugin):
             Extract(
                 20*8 + target_offset,
                 0 + target_offset,
+                value,
             ) == ACTORS.attacker,
             # Lets only look for cases where the attacker makes themselves the owner by saying that the attacker
             # is the sender of this transaction
